@@ -1,0 +1,20 @@
+<!-- Class Attribute -->
+<!DOCTYPE html> 
+<head>  
+    <style>
+   .wishing{ 
+          display: none;
+   } 
+</style>
+</head>
+<body> 
+    <p id="greet" class="wishing" >Hello bossy</p>  
+    <button onclick="onChange()">Enjoy your life</button> 
+    <script>  
+       function onChange()
+       { 
+             document.getElementById("greet").classList.remove("wishing");
+       }
+    </script>
+</body>
+</html> 
