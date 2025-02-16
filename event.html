@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+    <head>  
+        <style> 
+            body{ 
+                border : 2px solid salmon; 
+                padding: 10px; 
+                width : 400px;                
+            } 
+            span{ 
+                color : salmon;
+            }
+        </style>
+    </head>
+    <body>  
+        <h2>Events</h2>
+    The value is <span id="input"> 0</span> <br/> <br/>
+     <input type="button"  onclick="valueChange()" value="Click me"> 
+     <input type="button"  onclick="reset()" value="Reset"/> 
+     <script> 
+        function valueChange()
+        { 
+           var val= document.getElementById("input").innerHTML; 
+           val= parseInt(val)+1; 
+           document.getElementById("input").innerHTML=val;
+
+        } 
+        function reset()
+        { 
+            document.getElementById("input").innerHTML=0;
+        }
+     </script>
+    </body>
+</html>
