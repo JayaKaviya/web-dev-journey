@@ -9,7 +9,18 @@
 </head>
 <body> 
     <p id="greet" class="wishing" >Hello bossy</p>  
-    <button onclick="onChange()">Enjoy your life</button> 
+    <button onclick="onChange()">Enjoy your life</button>  
+    <!-- Nesting web page -->
+    <iframe src="https://www.wikipedia.org" width="800" height="600"></iframe>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload">
+    </form> 
+
+    
+    
     <script>  
        function onChange()
        { 
