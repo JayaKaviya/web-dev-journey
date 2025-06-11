@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visibility with Transition</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 100px;
+      background-color: coral;
+      color: white;
+      text-align: center;
+      line-height: 100px;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    .hidden {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .visible {
+      visibility: visible;
+      opacity: 1;
+      transition: opacity 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <button onclick="toggleBox()">Toggle Box</button>
+
+  <div id="myBox" class="box visible">Hello 👋</div>
+
+  <script>
+    function toggleBox() {
+      const box = document.getElementById('myBox');
+      if (box.classList.contains('visible')) {
+        box.classList.remove('visible');
+        box.classList.add('hidden');
+      } else {
+        box.classList.remove('hidden');
+        box.classList.add('visible');
+      }
+    }
+  </script>
+
+</body>
+</html>
