@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div style="position: relative; border: 2px dashed red; padding: 30px;">
+  Parent (position: relative)
+  
+  <div style="position: inherit; top: 20px; left: 0px; width: 150px; height: 80px; background: lightgreen;">
+    Child (inherits relative)<br>
+    Moves 20px down, 40px right
+  </div>
+</div>
+
+<div style="position: relative; border: 2px dashed red; padding: 30px;">
+  Parent (position: relative)
+
+  <div style="position: initial; top: 20px; left: 40px; width: 150px; height: 80px; background: lightcoral;">
+    Child (initial → static)<br>
+    top/left ignored
+  </div>
+</div> 
+
+<div style="height: 1000px;border: 2px dashed red;">
+  <div style="position: sticky; top: 0; background: orange;">
+    I stick to the top when scrolling!
+  </div>
+</div>
+
+<div style="position: fixed; top: 0; right: 0; background: yellow;border: 2px dashed red;">
+  I stay on top left even when scrolling
+</div>
+
+<div style="position: relative;border: 2px dashed red; height:20px; padding:30px;">
+  Parents are the main pillars of their children
+  <div style="position: absolute; top: 10px; left: 10px;">Child makes their parents happier by their growth,kindness</div>
+</div> 
+<div style="position: relative; top: 20px; left: 30px;">
+  I moved 20px down and 30px right from where I was
+</div>
+ 
+ <div style="position: relative; border: 2px dashed red; padding: 30px;">
+  Parent (position: relative)
+  
+  <div style="position: inherit; top: 20px; left: 40px; width: 150px; height: 80px; background: lightgreen;border: 2px dashed red;">
+    Child (inherits relative)<br>
+    Moves 20px down, 40px right
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
