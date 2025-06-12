@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #dropZone {
+      width: 350px;
+      height: 100px;
+      border: 2px dashed #aaa;
+      text-align: center;
+      padding-top: 40px;
+      font-family: sans-serif;
+    }
+  </style>
+  <script>
+    function allowDrop(event) {
+      event.preventDefault(); // Allow drop
+    }
+
+    function drag(event) {
+      event.dataTransfer.setData("text", event.target.id); // Set the data to be dragged
+    }
+
+    function drop(event) {
+      event.preventDefault();
+      const data = event.dataTransfer.getData("text");
+      const draggedElement = document.getElementById(data);
+      console.log(draggedElement);
+      event.target.appendChild(draggedElement); // Move image into drop zone
+    }
+  </script>
+</head>
+<body>
+
+<h3>Drag the image into the box below:</h3>
+
+<!-- Draggable Image -->
+<img id="dragImage" src="pic_trulli.jpg" draggable="true" ondragstart="drag(event)" width="100">
+
+<!-- Drop Zone -->
+<div id="dropZone" ondrop="drop(event)" ondragover="allowDrop(event)">
+  Drop image here
+</div>
+
+</body>
+</html>
