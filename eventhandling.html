@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+<button onclick="alert('Button clicked!')">Click Me</button>
+
+<button id="myBtn">Click Me</button>
+
+<button id="myBtn2">Click Me</button>
+
+<script>
+  document.getElementById("myBtn").onclick = function() {
+    alert("Button was clicked!");
+  };
+  
+   const btn = document.getElementById("myBtn2");
+  btn.addEventListener("click", function() {
+    alert("Handled using addEventListener!");
+  });
+</script>
+
+
+
+</body>
+</html>
