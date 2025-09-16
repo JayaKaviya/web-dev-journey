@@ -35,4 +35,23 @@ function outer(b){
 
 // outer()(); 
 var closure=outer("Hello world");
-closure();
+closure(); 
+
+
+// CLOSURE 4 
+function closest(){
+    var a=20;
+    function outer(b){ 
+            function inner(){
+                console.log(count,b,a);
+            } 
+            // let count=1; 
+            return inner;
+    } 
+    return outer;
+} 
+let count=100;
+
+// outer()(); 
+var closure4=closest()("Hello world");
+closure4();
