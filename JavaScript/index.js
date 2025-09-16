@@ -11,12 +11,28 @@ function x(){
 x(); 
 
 // CLOSURE 2
-function outer(){ 
-    function inner(){
+function outer2(){ 
+    function inner1(){
         console.log(count);
+    } 
+    var count=1; 
+    return inner1;
+} 
+
+// outer()(); 
+var closure2=outer2();
+closure2(); 
+
+
+// CLOSURE 3 - passing argument from outer scope
+function outer(b){ 
+    function inner(){
+        console.log(count,b);
     } 
     var count=1; 
     return inner;
 } 
 
-outer()();
+// outer()(); 
+var closure=outer("Hello world");
+closure();
