@@ -35,6 +35,7 @@ const users = [
   { fn: "Eva", ls: "Davis", age: 35 }
 ];
 
+// acc={ 22:2,25:1,30:1,35:1}
 const output=users.reduce(function(acc,cur){
     if(acc[cur.age]){
        acc[cur.age]+=1;
@@ -44,4 +45,17 @@ const output=users.reduce(function(acc,cur){
     } 
     return acc;
 },{}) 
-console.log(output);
+console.log(output); 
+
+
+const out=users.filter( x => x.age>25).map(x => x.fn);
+console.log(out); 
+
+
+const output2=users.reduce(function(acc,cur){
+    if(cur.age>25){
+       acc.push(cur.fn);
+    }
+    return acc;
+},[]) 
+console.log(output2); 
