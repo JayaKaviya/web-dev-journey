@@ -24,4 +24,24 @@ const calculate=function(radius,logic){
 
 console.log(calculate(radius,area));
 console.log(calculate(radius,perimeter));
-console.log(calculate(radius,diameter));
+console.log(calculate(radius,diameter)); 
+
+// #reduce 
+const users = [
+  { fn: "Alice", ls: "Smith", age: 25 },
+  { fn: "Bob", ls: "Johnson", age: 30 },
+  { fn: "Charlie", ls: "Brown", age: 22 },
+  { fn: "David", ls: "Lee", age: 22 },
+  { fn: "Eva", ls: "Davis", age: 35 }
+];
+
+const output=users.reduce(function(acc,cur){
+    if(acc[cur.age]){
+       acc[cur.age]+=1;
+    }
+    else{
+        acc[cur.age]=1;
+    } 
+    return acc;
+},{}) 
+console.log(output);
