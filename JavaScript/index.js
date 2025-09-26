@@ -54,4 +54,20 @@ let count=100;
 
 // outer()(); 
 var closure4=closest()("Hello world");
-closure4();
+closure4(); 
+
+
+// 
+var a=10;
+const c=20; 
+
+function test(){
+    if (true) {
+    var a=100;
+    const c=40;
+    const b=50;
+    }
+    console.log("Function :",a,c);
+} 
+test(); 
+console.log("Global: ",a,c);
