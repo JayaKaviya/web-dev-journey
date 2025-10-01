@@ -51,3 +51,17 @@ handlepromise();
 
 
 
+// example 3 - external api call
+api2="https://api.github.com/users/JayaKaviya";
+
+async function handle2(){
+    
+    const data=await fetch(api2);
+    //FETCH ALWAYS RETURNS THE PROMISE, THAT PROMISE HAS TO BE RESOLVED SO NEED AWAIT/ THEN ,
+    // THEN THE response is in readeable stream it has to be converted to json format 
+
+    const jsonval=await data.json();
+    console.log(" Github Jaya Kaviya in async example :",jsonval);
+    
+}
+handle2();
